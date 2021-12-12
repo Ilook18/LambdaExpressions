@@ -30,6 +30,13 @@ namespace LambdaExpressions
             }
 
         }
+        public static void Retreiving_Records_ForAgeBetween_thirteenToEighteen(List<Person> listPersonInCity)
+        {
+            foreach (Person person in listPersonInCity.FindAll(e => (e.Age >= 13 && e.Age <= 18)).ToList())
+            {
+                Console.Write("Name : " + person.Name + "\t\tAge: " + person.Age + "\n");
+            }
+        }
     }
 }
 
