@@ -67,8 +67,28 @@ namespace LambdaExpressions
             }
 
         }
+        public static void RemoveSpecificName(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("Enter the Name Of the Person you want to search for");
+            string name = Console.ReadLine();
+            var found = listPersonInCity.Find(e => (e.Name == name));
+
+            if (found == null)
+            {
+                Console.Write("Nothing found");
+            }
+            else
+            {
+                listPersonInCity.Remove(found);
+                Console.WriteLine("name removed from the list");
+            }
+        }
     }
 }
+
+
+        
+
 
     
         

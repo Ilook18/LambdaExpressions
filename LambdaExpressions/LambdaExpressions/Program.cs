@@ -14,7 +14,7 @@ namespace LambdaExpressions
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION:\n1.Add Records\n2.Retreiving Records For age less than Sixty\n3.Age Between 13 to 18\n4. Average Age\n5.Find Specific Name\n6. Skip Record\n7. Exit\n");
+                Console.WriteLine("CHOOSE OPTION:\n1.Add Records\n2.Retreiving Records For age less than Sixty\n3.Age Between 13 to 18\n4. Average Age\n5.Find Specific Name\n6. Skip Record\n7.Remove Specific Name\n8. Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,6 +37,9 @@ namespace LambdaExpressions
                         PersonDataManagement.SkipRecord(listPersonInCity);
                         break;
                     case 7:
+                        PersonDataManagement.RemoveSpecificName(listPersonInCity);
+                        break;
+                    case 8:
                         flag = false;
                         break;
 
