@@ -37,6 +37,12 @@ namespace LambdaExpressions
                 Console.Write("Name : " + person.Name + "\t\tAge: " + person.Age + "\n");
             }
         }
+        public static void Average_Age(List<Person> listPersonInCity)
+        {
+            double average = listPersonInCity.Average(e => (e.Age));
+            Console.Write(average);
+
+        }
     }
 }
 
