@@ -59,6 +59,14 @@ namespace LambdaExpressions
             }
 
         }
+        public static void SkipRecord(List<Person> listPersonInCity)
+        {
+            foreach (Person person in listPersonInCity.Where(e => (e.Age > 60)).ToList())
+            {
+                Console.WriteLine("Name : " + person.Name + "\t\tAge" + person.Age + "\n");
+            }
+
+        }
     }
 }
 
