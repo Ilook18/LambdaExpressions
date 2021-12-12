@@ -43,6 +43,22 @@ namespace LambdaExpressions
             Console.Write(average);
 
         }
+        public static void FindSpecificName(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("Enter the Name Of the Person you want to search for");
+            string name = Console.ReadLine();
+
+            if (listPersonInCity.Any(e => (e.Name == name)))
+            {
+                Console.WriteLine("Name found");
+
+            }
+            else
+            {
+                Console.WriteLine("Name not found");
+            }
+
+        }
     }
 }
 
